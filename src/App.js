@@ -38,31 +38,6 @@ class App extends Component {
 		}, () => console.log(this.state));
 	}
 	
-	//clickHandlerForHeader(evt) {
-	  ////Функция валидация цены
-	  //function validatePrice(price, value) {
-		//if (isNaN(price)) return value;
-		//price = Number(price);
-		//if (price < 0) return 0;
-		//if (price > 99999999) return 99999999;
-		//return price;
-	   //}
-		
-	   //evt.preventDefault();
-	   //let lowPrice = this.state.lowPrice;
-	   //let highPrice = this.state.highPrice;
-		
-	   //lowPrice = validatePrice(lowPrice, 0);
-	   //highPrice = validatePrice(highPrice, 99999999);
-	   //if (lowPrice > highPrice) lowPrice = highPrice - 1;
-	   //this.setState({
-	     //lowPrice: lowPrice,
-		 //highPrice: highPrice
-	   //}, () => {
-	     //console.log(this.state)
-	   //});
-	//}
-	
 	componentDidMount() {
 		//Функция получения данных сервера
 		const getData = async () => {
@@ -128,10 +103,10 @@ class App extends Component {
 	
 	clickHandlerForPrices = (lowPrice, highPrice) => {
 		console.log(lowPrice, highPrice);
-		//this.setState({
-			//lowPrice: lowPrice,
-			//highPrice: highPrice
-		//}, () => console.log(this.state));
+		this.setState({
+			lowPrice: lowPrice,
+			highPrice: highPrice
+		});
 	}
 	
 	
