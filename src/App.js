@@ -102,17 +102,44 @@ class App extends Component {
 	}
 	
 	
-	clickHandlerForPrices = (lowPrice, highPrice) => {
+	/*clickHandlerForPrices = (lowPrice, highPrice) => {
 		console.log(lowPrice, highPrice);
 		this.setState({
 			lowPrice: lowPrice,
 			highPrice: highPrice
 		});
+	}*/
+	
+	clickHandlerForPrices = evt => {
+		
+		const validatePrice = price => {
+			price = Number(price);
+			if (price < 0) return 0;
+			if (price > 9999999) return 9999999;
+			return price;
+		};
+	
+	
+		evt.preventDefault();
+		const target = evt.target;
+		const parent = target.parentNode;
+		const lowPrice = parent.querySelector('input[name="lowPrice"]');
+		const lowPriceValue = lowPrice.value;
+		const highPrice = parent.querySelector('input[name="highPrice"]')
+		const highPriceValue = highPrice.value;
+    
+		let validLowPrice = validatePrice(lowPriceValue);
+		const validHighPrice = validatePrice(highPriceValue);
+		if (validLowPrice > validHighPrice) {
+			validLowPrice = validHighPrice - 1;
+		}
+		this.setState({
+			lowPrice: validLowPrice, 
+			highPrice: validHighPrice
+		}, () => console.log(this.state));
 	}
 	
 	
-	auxChangeHandler = () => {
-	};
 	
 	render() {
 		
@@ -171,13 +198,14 @@ class App extends Component {
 		return (
 			<div>
 				<Header 
-					lowPrice={this.state.lowPrice}
-					highPrice={this.state.highPrice}
+					key={new Date()}
+					lowPrice={lowPrice}
+					highPrice={highPrice}
 					clickHandlerForPrices={this.clickHandlerForPrices}
 					changeHandler={this.changeHandler}
 					clickHandlerForDisplay={this.clickHandlerForDisplay}
 					phrase={
-						this.state.isFavorites ? 
+						isFavorites ? 
 							'Вернуться' : 
 							'Показать избранное'
 					}
