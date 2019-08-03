@@ -198,7 +198,7 @@ class App extends Component {
 		return (
 			<div>
 				<Header 
-					key={new Date()}
+
 					lowPrice={lowPrice}
 					highPrice={highPrice}
 					clickHandlerForPrices={this.clickHandlerForPrices}

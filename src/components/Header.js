@@ -20,6 +20,7 @@ class Header extends React.Component {
 	    <br />
 	    
 	    <input 
+		  key={new Date().getMilliseconds() + 1}
 	      type="number"
 		  defaultValue={this.props.lowPrice}
 		  name="lowPrice"
@@ -27,6 +28,7 @@ class Header extends React.Component {
 	    />
 	    
 	    <input 
+		  key={new Date().getMilliseconds() + 2}
 	      type="number"
 		  defaultValue={this.props.highPrice}
 		  name="highPrice"
