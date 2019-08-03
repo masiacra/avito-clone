@@ -20,14 +20,14 @@ class App extends Component {
 			highPrice: 9999999,
 			isFavorites: false
 		};
+		
 		this.clickHandlerForAddToFavorites = 
 			this.clickHandlerForAddToFavorites.bind(this);
 			
 		this.changeHandler = this.changeHandler.bind(this);
 		
-		//this.clickHandlerForHeader = 
-			//this.clickHandlerForHeader.bind(this);
 	}
+	
 	
 	//Обработчик изменения компонентов фильтрации
 	changeHandler(evt) {
@@ -101,6 +101,7 @@ class App extends Component {
 		});
 	}
 	
+	
 	clickHandlerForPrices = (lowPrice, highPrice) => {
 		console.log(lowPrice, highPrice);
 		this.setState({
@@ -109,6 +110,9 @@ class App extends Component {
 		});
 	}
 	
+	
+	auxChangeHandler = () => {
+	};
 	
 	render() {
 		
