@@ -36,19 +36,57 @@ table {
 html,
 body {
   height: 100%;
+  background-color: #ADD8E6;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
 }
 
 .container {
 	margin: 10px;
 }
 
-
-/*Стили для чердака*/
-header {
-	font-size: 30px;
+.btn { 
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,.1);
+	background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+	padding: 10px;
 }
 
+/*Стили для чердака*/
+header select,
+header input[type="number"],
+header button {
+	font-size: 1.125rem;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-family: "Hoefler Text", Garamond, Times, serif;
+}
 
+header select,
+header input[type="number"] {
+	margin-bottom: 20px;
+}
+
+header input[type="number"] {
+	border-radius: 5px;
+}
+
+header button {
+	margin-bottom: 10px;
+}
+
+/*Стили для основного контента*/
+contact_card {
+	font-size: 1rem;
+}
+
+contact_card img {
+	max-width: 100%;
+}
 
 /* только для устройств со средним размером экрана */
 @media (min-width: 481px) and (max-width:768px) {

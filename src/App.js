@@ -189,7 +189,7 @@ class App extends Component {
 			body = 'Loading';
 		}
 		return (
-			<React.Fragment>
+			<div className="container">
 				<Header 
 					lowPrice={lowPrice}
 					highPrice={highPrice}
@@ -206,7 +206,7 @@ class App extends Component {
 					{body}
 				</div>
 				<Footer />
-			</React.Fragment>
+			</div>
 		);
 	}
 	

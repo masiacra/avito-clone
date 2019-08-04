@@ -4,22 +4,23 @@ import PriceComponent from "./PriceComponent";
 
 function ContactCard(props) {
   return (
-    <div>
+    <div className="contact_card">
       <h2>{props.item.title}</h2>
       <img
         src={props.item.pictures[0]}
         alt="some"
       />
-      <h2>
+      <p>
         Дополнительно фотографий: {props.item.pictures.length - 1}
-      </h2>
+      </p>
       <PriceComponent price={props.item.price} />
-      <h2>Продавец: {props.item.name}</h2>
-      <h2>Рейтинг: {props.item.rating}</h2>
+      <p>Продавец: {props.item.name}</p>
+      <p>Рейтинг: {props.item.rating}</p>
       <button 
         onClick={() => {
           props.clickHandler(props.item.id);
         }}
+        className="btn"
        >
          {props.phrase}
        </button>

@@ -7,8 +7,6 @@ import App from "./App";
 import "./index.css";
 
 ReactDOM.render(
-	<div className="container">
-	  <App />
-	</div>,
+	<App />,
 	document.getElementById("root")
 );

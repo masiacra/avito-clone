@@ -32,11 +32,17 @@ class Header extends React.Component {
 		  ref={this.inpHigh}
 	    />
 	    
-	    <button onClick={this.props.clickHandlerForPrices}>
+	    <button 
+			onClick={this.props.clickHandlerForPrices}
+			className="btn"
+		>
 	     Фильтровать по цене
 	    </button>
 	    
-	    <button onClick={this.props.clickHandlerForDisplay}>
+	    <button 
+			onClick={this.props.clickHandlerForDisplay}
+			className="btn"
+	    >
           {this.props.phrase}
 	    </button>
 	    
