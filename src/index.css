@@ -56,6 +56,10 @@ body {
 }
 
 /*Стили для чердака*/
+header {
+	margin-bottom: 20px;
+}
+
 header select,
 header input[type="number"],
 header button {
@@ -80,12 +84,28 @@ header button {
 }
 
 /*Стили для основного контента*/
-contact_card {
+.contact_card {
 	font-size: 1rem;
+	border: 1px solid black;
+	padding: 10px;
+	margin-bottom: 20px;
 }
 
-contact_card img {
+.contact_card h2 {
+	font-size: 1.5em;
+}
+
+.contact_card h2::first-letter {
+	text-transform: uppercase;
+}
+
+.contact_card img {
 	max-width: 100%;
+	margin-bottom: 10px;
+}
+
+.contact_card p {
+	line-height: 150%;
 }
 
 /* только для устройств со средним размером экрана */
