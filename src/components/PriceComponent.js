@@ -13,7 +13,7 @@ function PriceComponent(props) {
 		}
 		return res.join(' ');
 	}
-	
+	//Тело функционального компонента
 	const { price } = props;
 	if (!price) return <h2>Цена договорная</h2>
 	const res = transformPrice(price);

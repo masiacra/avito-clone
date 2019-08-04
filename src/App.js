@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-//Импортируем контейнеры
+//Импортируем компоненты
 import ContactCard from "./components/ContactCard";
 import Header from "./components/Header";
-
+import Footer from "./components/Footer";
 
 
 
@@ -189,7 +189,7 @@ class App extends Component {
 			body = 'Loading';
 		}
 		return (
-			<div>
+			<React.Fragment>
 				<Header 
 					lowPrice={lowPrice}
 					highPrice={highPrice}
@@ -205,7 +205,8 @@ class App extends Component {
 				<div>
 					{body}
 				</div>
-			</div>
+				<Footer />
+			</React.Fragment>
 		);
 	}
 	
