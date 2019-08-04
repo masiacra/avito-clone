@@ -98,16 +98,15 @@ class App extends Component {
 	}
 	
 	//Обработчик для обработки клика по кнопке фильтрации цены
-	clickHandlerForPrices = evt => {
-		
+	clickHandlerForPrices = (evt) => {
+		//Валидация цены
 		const validatePrice = price => {
 			price = Number(price);
 			if (price < 0) return 0;
 			if (price > 9999999) return 9999999;
 			return price;
 		};
-	
-	
+		//Тело метода
 		evt.preventDefault();
 		const target = evt.target;
 		const parent = target.parentNode;
@@ -124,7 +123,7 @@ class App extends Component {
 		this.setState({
 			lowPrice: validLowPrice, 
 			highPrice: validHighPrice
-		}, () => console.log(this.state));
+		});
 	}
 	
 	
@@ -146,7 +145,13 @@ class App extends Component {
 		);
 		
 		//Фильтрующая массив функция
-		const filterFn = (criterion, lowPrice, highPrice, isFavorites, favorites) => obj => {
+		const filterFn = (
+			criterion, 
+			lowPrice, 
+			highPrice, 
+			isFavorites, 
+			favorites
+		) => obj => {
 			if (obj["category"] === criterion || criterion === 'any') {
 				if (obj["price"] >= lowPrice && obj["price"] <= highPrice) {
 					if (isFavorites) {
@@ -186,7 +191,6 @@ class App extends Component {
 		return (
 			<div>
 				<Header 
-
 					lowPrice={lowPrice}
 					highPrice={highPrice}
 					clickHandlerForPrices={this.clickHandlerForPrices}
