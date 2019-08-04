@@ -16,9 +16,6 @@ class Header extends React.Component {
     return (
       <header>
         <SelectComponent changeHandler={this.props.changeHandler} />
-
-	    <br />
-	    
 	    <input 
 		  key={new Date().getMilliseconds() + 1}
 	      type="number"

@@ -1,114 +1,70 @@
-* {
-    box-sizing: border-box;
+/* сброс стилей браузера */
+* { box-sizing: border-box; }
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
-
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 body {
-    margin: 0;
-    background-color: whitesmoke;
+  line-height: 1.2;
+}
+ol { 
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+} 
+/* конец кода сброса стилей браузера */
+ 
+/* стили для мобильных устройств и базовые стили для всех устройств  */
+
+/*Общие стили*/
+html,
+body {
+  height: 100%;
 }
 
+.container {
+	margin: 10px;
+}
+
+
+/*Стили для чердака*/
 header {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    background: #6441A5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-size: 30px;
 }
 
-header > img {
-    height: 80%;
-    margin-left: 10%;
+
+
+/* только для устройств со средним размером экрана */
+@media (min-width: 481px) and (max-width:768px) {
+  body {
+    /* только для планшетов */
+  }
+
 }
 
-header > p {
-    font-family: VT323, monospace;
-    color: whitesmoke;
-    font-size: 50px;
-    margin-left: 60px;
+/* только для устройств с крупным размером экрана */
+@media (min-width:769px) {
+  body {
+    /* только для компьютеров */
+  }
+
 }
 
-.meme {
-    position: relative;
-    width: 90%;
-    margin: auto;
-}
 
-.meme > img {
-    width: 100%;
-}
 
-.meme > h2 {
-    position: absolute;
-    width: 80%;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 15px 0;
-    padding: 0 5px;
-    font-family: impact, sans-serif;
-    font-size: 2em;
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 1px;
-    text-shadow:
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        0 2px 0 #000,
-        2px 0 0 #000,
-        0 -2px 0 #000,
-        -2px 0 0 #000,
-        2px 2px 5px #000;
-}
-
-.meme > .bottom {
-    bottom: 0;
-}
-
-.meme > .top {
-    top: 0;
-}
-
-.meme-form {
-    width: 90%;
-    margin: 20px auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.meme-form > input {
-    width: 45%;
-    height: 40px;
-}
-
-.meme-form > button {
-    border: none;
-    font-family: VT323, monospace;
-    font-size: 25px;
-    letter-spacing: 1.5px;
-    color: white;
-    background: #6441A5;
-}
-
-.meme-form > input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-family: VT323, monospace;
-  font-size: 25px;
-  text-align: cen
-}
-.meme-form > input::-moz-placeholder { /* Firefox 19+ */
-  font-family: VT323, monospace;
-  font-size: 25px;
-  text-align: cen
-}
-.meme-form > input:-ms-input-placeholder { /* IE 10+ */
-  font-family: VT323, monospace;
-  font-size: 25px;
-  text-align: cen
-}
-.meme-form > input:-moz-placeholder { /* Firefox 18- */
-  font-family: VT323, monospace;
-  font-size: 25px;
-  text-align: cen
-}
