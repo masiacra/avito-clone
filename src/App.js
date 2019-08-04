@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+//Импортируем контейнеры
 import ContactCard from "./components/ContactCard";
 import Header from "./components/Header";
 
@@ -8,6 +9,7 @@ import Header from "./components/Header";
 
 
 class App extends Component {
+	
 	constructor() {
 		super();
 		this.state = {
@@ -20,17 +22,11 @@ class App extends Component {
 			highPrice: 9999999,
 			isFavorites: false
 		};
-		
-		this.clickHandlerForAddToFavorites = 
-			this.clickHandlerForAddToFavorites.bind(this);
-			
-		this.changeHandler = this.changeHandler.bind(this);
-		
 	}
 	
 	
 	//Обработчик изменения компонентов фильтрации
-	changeHandler(evt) {
+	changeHandler = (evt) => {
 		const target = evt.target;
 		const { name, value } = target;
 		this.setState({
@@ -79,7 +75,7 @@ class App extends Component {
 	
 	//Обработчик для компонента ContactCard.
 	//Добавляем объявление в избранное
-	clickHandlerForAddToFavorites(id) {
+	clickHandlerForAddToFavorites =(id) => {
 		const favorites = this.state.favorites.slice();
 		if (!favorites.includes(id)) {
 			favorites.push(id);
@@ -101,15 +97,7 @@ class App extends Component {
 		});
 	}
 	
-	
-	/*clickHandlerForPrices = (lowPrice, highPrice) => {
-		console.log(lowPrice, highPrice);
-		this.setState({
-			lowPrice: lowPrice,
-			highPrice: highPrice
-		});
-	}*/
-	
+	//Обработчик для обработки клика по кнопке фильтрации цены
 	clickHandlerForPrices = evt => {
 		
 		const validatePrice = price => {
