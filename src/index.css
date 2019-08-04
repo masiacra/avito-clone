@@ -44,8 +44,14 @@ body {
 	font-size: 16px;
 }
 
+#root {
+	height: 100%;
+}
+
 .container {
-	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 .btn { 
@@ -55,9 +61,20 @@ body {
 	padding: 10px;
 }
 
-/*Стили для чердака*/
+/*Стили для чердака
 header {
+	padding: 10px;
 	margin-bottom: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+}*/
+
+header {
+	flex: 0 0 auto;
+	margin: 10px;
 }
 
 header select,
@@ -84,6 +101,11 @@ header button {
 }
 
 /*Стили для основного контента*/
+main {
+	flex: 1 0 auto;
+	margin: 10px;
+}
+
 .contact_card {
 	font-size: 1rem;
 	border: 1px solid black;
@@ -106,6 +128,16 @@ header button {
 
 .contact_card p {
 	line-height: 150%;
+}
+
+
+/*Стили для подвала*/
+footer {
+	flex: 0 0 auto;
+	background-color: #4D4D4D;
+	color: white;
+	text-align: center;
+	padding: 20px;
 }
 
 /* только для устройств со средним размером экрана */

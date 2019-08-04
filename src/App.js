@@ -202,9 +202,9 @@ class App extends Component {
 							'Показать избранное'
 					}
 				/>
-				<div>
+				<main>
 					{body}
-				</div>
+				</main>
 				<Footer />
 			</div>
 		);
