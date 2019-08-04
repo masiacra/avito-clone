@@ -62,15 +62,7 @@ body {
 }
 
 /*Стили для чердака
-header {
-	padding: 10px;
-	margin-bottom: 20px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: white;
-}*/
+*/
 
 header {
 	flex: 0 0 auto;
@@ -140,21 +132,73 @@ footer {
 	padding: 20px;
 }
 
-/* только для устройств со средним размером экрана */
-@media (min-width: 481px) and (max-width:768px) {
+
+@media (min-width: 450px) and (max-width:800px) {
   body {
-    /* только для планшетов */
+    font-size: 18px;
   }
-
-}
-
-/* только для устройств с крупным размером экрана */
-@media (min-width:769px) {
-  body {
-    /* только для компьютеров */
-  }
-
+  /*
+*/
+  
 }
 
 
+
+@media (min-width:801px) and (max-width:999px) {
+  body {
+    font-size: 20px;
+  }
+  
+  /*Стили для подвала*/
+  header {
+	margin: 0;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #ADD8E6;
+  }
+  
+  header select,
+  header input[type="number"],
+  header button {
+	display: inline-block;
+	width: auto;
+  }
+  
+  main {
+	margin-top: 20%;
+  }
+  
+}
+
+@media (min-width:1000px) {
+  body {
+    font-size: 20px;
+  }
+  
+  /*Стили для подвала*/
+  header {
+	margin: 0;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #ADD8E6;
+  }
+  
+  header select,
+  header input[type="number"],
+  header button {
+	display: inline-block;
+	width: auto;
+  }
+  
+  main {
+	margin-top: 10%;
+  }
+  
+}
 
