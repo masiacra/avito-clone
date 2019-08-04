@@ -137,9 +137,17 @@ footer {
   body {
     font-size: 18px;
   }
-  /*
-*/
   
+  /*Основной контент*/
+  main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+  }
+
+  .contact_card {
+	width: 45%;
+  }
 }
 
 
@@ -167,8 +175,15 @@ footer {
 	width: auto;
   }
   
+  /*Основной контент*/
   main {
 	margin-top: 20%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+  }
+  .contact_card {
+	width: 30%;
   }
   
 }
@@ -198,6 +213,12 @@ footer {
   
   main {
 	margin-top: 10%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+  }
+  .contact_card {
+	width: 22%;
   }
   
 }
