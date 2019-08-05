@@ -14,8 +14,7 @@ function ContactCard(props) {
         <p>
           <span className="allocated">
             Дополнительно фотографий:
-          </span>
-          {props.item.pictures.length - 1}
+          </span> {props.item.pictures.length - 1}
         </p>
         <PriceComponent price={props.item.price} />
         <p><span className="allocated">Продавец:</span> {props.item.name}</p>
