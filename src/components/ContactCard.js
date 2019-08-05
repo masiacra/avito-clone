@@ -10,12 +10,14 @@ function ContactCard(props) {
         src={props.item.pictures[0]}
         alt="some"
       />
-      <p>
-        Дополнительно фотографий: {props.item.pictures.length - 1}
-      </p>
-      <PriceComponent price={props.item.price} />
-      <p>Продавец: {props.item.name}</p>
-      <p>Рейтинг: {props.item.rating}</p>
+      <div>
+        <p>
+          Дополнительно фотографий: {props.item.pictures.length - 1}
+        </p>
+        <PriceComponent price={props.item.price} />
+        <p>Продавец: {props.item.name}</p>
+        <p>Рейтинг: {props.item.rating}</p>
+      </div>
       <button 
         onClick={() => {
           props.clickHandler(props.item.id);
