@@ -15,6 +15,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
+        <h1>Avito</h1>
         <SelectComponent changeHandler={this.props.changeHandler} />
 	    <input 
 		  key={new Date().getMilliseconds() + 1}

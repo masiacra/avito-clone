@@ -29,8 +29,10 @@ table {
   border-spacing: 0;
 } 
 /* конец кода сброса стилей браузера */
- 
-/* стили для мобильных устройств и базовые стили для всех устройств  */
+
+
+/*Импортируем шрифт*/ 
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
 /*Общие стили*/
 html,
@@ -67,6 +69,12 @@ body {
 header {
 	flex: 0 0 auto;
 	margin: 10px;
+}
+
+header h1 {
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	font-size: 2rem;
 }
 
 header select,
