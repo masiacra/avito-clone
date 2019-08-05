@@ -122,6 +122,11 @@ main {
 	line-height: 150%;
 }
 
+.contact_card button {
+	display: block;
+	width: 100%;
+}
+
 
 /*Стили для подвала*/
 footer {
