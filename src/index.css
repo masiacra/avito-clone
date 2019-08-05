@@ -36,7 +36,7 @@ table {
 html,
 body {
   height: 100%;
-  background-color: rgb(205,233,170);
+  background-color: #ADD8E6;
 }
 
 body {
@@ -66,9 +66,7 @@ body {
 
 header {
 	flex: 0 0 auto;
-	margin: 0;
-	padding: 10px;
-	background-color: #4A96A1;
+	margin: 10px;
 }
 
 header select,
@@ -102,7 +100,7 @@ main {
 
 .contact_card {
 	font-size: 1rem;
-	background-color: rgb(221,134,122);
+	border: 1px solid black;
 	padding: 10px;
 	margin-bottom: 20px;
 	display: flex;
@@ -144,7 +142,7 @@ main {
 /*Стили для подвала*/
 footer {
 	flex: 0 0 auto;
-	background-color: #478C98;
+	background-color: #4D4D4D;
 	color: white;
 	text-align: center;
 	padding: 20px;
