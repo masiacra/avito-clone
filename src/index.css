@@ -72,12 +72,15 @@ body {
 header {
 	flex: 0 0 auto;
 	margin: 10px;
+	background-color: #4D4D4D;
+	background-image: linear-gradient(to right, #BFBFBF, #4D4D4D); 
 }
 
 header h1 {
 	text-align: center;
 	font-family: 'Lobster', cursive;
 	font-size: 2rem;
+	color: white;
 }
 
 header select,
@@ -120,6 +123,10 @@ main {
 	font-size: 1.5em;
 	text-align: center;
 	flex: 0 0 auto;
+}
+
+.contact_card h2:hover {
+	color: yellow;
 }
 
 .contact_card h2::first-letter {
