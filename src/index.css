@@ -67,8 +67,7 @@ body {
 	font-weight: bolder;
 }
 
-/*Стили для чердака
-*/
+/*Стили для чердака*/
 
 header {
 	flex: 0 0 auto;
@@ -94,9 +93,6 @@ header button {
 header select,
 header input[type="number"] {
 	margin-bottom: 10px;
-}
-
-header input[type="number"] {
 	border-radius: 5px;
 }
 
