@@ -81,7 +81,7 @@ header button {
 
 header select,
 header input[type="number"] {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 header input[type="number"] {
@@ -157,7 +157,7 @@ footer {
     font-size: 20px;
   }
   
-  /*Стили для подвала*/
+  /*Стили для чердака*/
   header {
 	margin: 0;
 	padding: 10px;
@@ -193,7 +193,7 @@ footer {
     font-size: 20px;
   }
   
-  /*Стили для подвала*/
+  /*Стили для чердака*/
   header {
 	margin: 0;
 	padding: 10px;
@@ -211,6 +211,7 @@ footer {
 	width: auto;
   }
   
+  /*Стили для основного контента*/
   main {
 	margin-top: 10%;
 	display: flex;
