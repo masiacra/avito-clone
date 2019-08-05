@@ -226,6 +226,7 @@ footer {
 	left: 0;
 	right: 0;
 	background-color: #ADD8E6;
+	text-align: center;
   }
   
   header select,
@@ -237,7 +238,7 @@ footer {
   
   /*Стили для основного контента*/
   main {
-	margin-top: 10%;
+	margin-top: 12%;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;

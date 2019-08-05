@@ -18,7 +18,7 @@ function PriceComponent(props) {
 	if (!price) return <p>Цена договорная</p>
 	const res = transformPrice(price);
 	return (
-		<p>Цена: { res } руб</p>
+		<p>{ res } руб.</p>
 	);
 }
 
