@@ -114,6 +114,7 @@ main {
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-around;
+	cursor: pointer;
 }
 
 .contact_card h2 {
