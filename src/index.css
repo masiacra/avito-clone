@@ -63,6 +63,10 @@ body {
 	padding: 10px;
 }
 
+.allocated {
+	font-weight: bolder;
+}
+
 /*Стили для чердака
 */
 

@@ -12,11 +12,14 @@ function ContactCard(props) {
       />
       <div>
         <p>
-          Дополнительно фотографий: {props.item.pictures.length - 1}
+          <span className="allocated">
+            Дополнительно фотографий:
+          </span>
+          {props.item.pictures.length - 1}
         </p>
         <PriceComponent price={props.item.price} />
-        <p>Продавец: {props.item.name}</p>
-        <p>Рейтинг: {props.item.rating}</p>
+        <p><span className="allocated">Продавец:</span> {props.item.name}</p>
+        <p><span className="allocated">Рейтинг:</span> {props.item.rating}</p>
       </div>
       <button 
         onClick={() => {

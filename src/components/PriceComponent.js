@@ -15,10 +15,10 @@ function PriceComponent(props) {
 	}
 	//Тело функционального компонента
 	const { price } = props;
-	if (!price) return <p>Цена договорная</p>
+	if (!price) return <p className="allocated">Цена договорная</p>
 	const res = transformPrice(price);
 	return (
-		<p>{ res } руб.</p>
+		<p className="allocated">{ res } руб.</p>
 	);
 }
 
