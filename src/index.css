@@ -107,6 +107,7 @@ main {
 
 .contact_card h2 {
 	font-size: 1.5em;
+	text-align: center;
 }
 
 .contact_card h2::first-letter {
