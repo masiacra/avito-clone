@@ -140,9 +140,6 @@ main {
 	flex: 0 0 auto;
 }
 
-.contact_card h2:hover {
-	color: yellow;
-}
 
 .contact_card h2::first-letter {
 	text-transform: uppercase;
