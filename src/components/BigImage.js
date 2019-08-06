@@ -10,7 +10,7 @@ function BigImage(props) {
 				alt={props.title}
 			/>
 			<button 
-				onClick={props.clickHandlerForClose}
+				onClick={props.clickHandlerForClosing}
 			>
 			  Закрыть
 			</button>

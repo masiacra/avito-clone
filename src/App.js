@@ -40,7 +40,12 @@ class App extends Component {
 		});
 	}
 	
-	
+	//Обработчик клика для закрытия увеличенного фото
+	clickHandlerForClosing = () => {
+		this.setState({
+			isHidden: true
+		});
+	}
 	
 	//Обработчик изменения компонентов фильтрации
 	changeHandler = (evt) => {
@@ -199,7 +204,10 @@ class App extends Component {
 				lowPrice, 
 				highPrice, 
 				isFavorites, 
-				favorites
+				favorites,
+				title, 
+				isHidden, 
+				bigImage
 			} = this.state;
 		const curryFilterFn = filterFn(
 			category, 
@@ -233,9 +241,10 @@ class App extends Component {
 					{body}
 				</main>
 				<BigImage 
-					isHidden={this.state.isHidden}
-					src={this.state.bigImage}
-					title={this.state.title}
+					isHidden={isHidden}
+					src={bigImage}
+					title={title}
+					clickHandlerForClosing={this.clickHandlerForClosing}
 				/>
 				<Footer />
 			</div>
