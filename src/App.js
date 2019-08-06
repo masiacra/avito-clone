@@ -29,9 +29,8 @@ class App extends Component {
 		};
 	}
 	
-	//Обработчик клика по фотографии
+	//Обработчик клика по фотографии в контактной карте
 	clickHandlerForImg = (id) => {
-		const numId = parseInt(id);
 		const product = this.state.data[id];
 		const {pictures, title} = product;
 		this.setState({
@@ -40,6 +39,8 @@ class App extends Component {
 			title: title
 		});
 	}
+	
+	
 	
 	//Обработчик изменения компонентов фильтрации
 	changeHandler = (evt) => {
