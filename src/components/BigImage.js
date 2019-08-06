@@ -2,8 +2,9 @@ import React from "react";
 
 
 function BigImage(props) {
+	const className= props.isHidden ? 'fixed hidden' : 'fixed';
 	return (
-		<div className="fixed hidden" id="bigImage">
+		<div className={className}>
 			<img
 				src={props.src}
 				alt={props.title}
@@ -11,3 +12,5 @@ function BigImage(props) {
 		</div>		
 	);
 }
+
+export default BigImage;

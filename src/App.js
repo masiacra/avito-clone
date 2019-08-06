@@ -22,18 +22,24 @@ class App extends Component {
 			category: 'any',
 			lowPrice: 0,
 			highPrice: 9999999,
-			isFavorites: false
+			isFavorites: false,
+			isHidden: true,
+			bigImage: null,
+			title: null
 		};
 	}
 	
-	/*Обработчик клика по фотографии
+	//Обработчик клика по фотографии
 	clickHandlerForImg = (id) => {
 		const numId = parseInt(id);
-		const props = this.state.data[id];
-		const bigImage = document.getElementById('bigImage');
-		bigImage.classList.remove('hidden');
+		const product = this.state.data[id];
+		const {pictures, title} = product;
+		this.setState({
+			isHidden: false,
+			bigImage: pictures[0],
+			title: title
+		});
 	}
-	*/
 	
 	//Обработчик изменения компонентов фильтрации
 	changeHandler = (evt) => {
@@ -225,6 +231,11 @@ class App extends Component {
 				<main>
 					{body}
 				</main>
+				<BigImage 
+					isHidden={this.state.isHidden}
+					src={this.state.bigImage}
+					title={this.state.title}
+				/>
 				<Footer />
 			</div>
 		);
