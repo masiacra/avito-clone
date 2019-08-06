@@ -104,6 +104,7 @@ header h1 {
 header select,
 header input[type="number"],
 header button {
+	border: none;
 	font-size: 1.125rem;
 	display: block;
 	width: 100%;
@@ -265,6 +266,7 @@ footer {
   header button {
 	display: inline-block;
 	width: auto;
+	margin-left: 10px;
   }
   
   /*Стили для основного контента*/
