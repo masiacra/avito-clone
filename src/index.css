@@ -63,6 +63,12 @@ body {
 	padding: 10px;
 }
 
+.btn,
+.btn:active,
+.btn:focus {
+	outline: none;
+}
+
 .allocated {
 	font-weight: bolder;
 }
