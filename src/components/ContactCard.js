@@ -9,6 +9,10 @@ function ContactCard(props) {
       <img
         src={props.item.pictures[0]}
         alt="some"
+        onClick={() => {
+						props.clickHandlerForImg(props.item.id);
+					}	
+				}
       />
       <div>
         <p>

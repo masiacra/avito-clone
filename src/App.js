@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 
+import BigImage from "./components/BigImage.js";
+
 
 
 class App extends Component {
@@ -24,6 +26,14 @@ class App extends Component {
 		};
 	}
 	
+	/*Обработчик клика по фотографии
+	clickHandlerForImg = (id) => {
+		const numId = parseInt(id);
+		const props = this.state.data[id];
+		const bigImage = document.getElementById('bigImage');
+		bigImage.classList.remove('hidden');
+	}
+	*/
 	
 	//Обработчик изменения компонентов фильтрации
 	changeHandler = (evt) => {
@@ -150,6 +160,7 @@ class App extends Component {
 				'Добавить в избранное'
 			}
 			clickHandler={this.clickHandlerForAddToFavorites}
+			clickHandlerForImg={this.clickHandlerForImg}
 		  />
 		);
 		

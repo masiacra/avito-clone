@@ -73,6 +73,18 @@ body {
 	font-weight: bolder;
 }
 
+
+.fixed {
+	position: fixed;
+	top: 25%;
+	left : 10%;
+	right: 10%;
+}
+
+.hidden {
+	display: none;
+}
+
 /*Стили для чердака*/
 
 header {
