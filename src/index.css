@@ -105,6 +105,15 @@ header input[type="number"] {
 	border-radius: 5px;
 }
 
+header select,
+header select:hover,
+header select:focus,
+header input[type="number"],
+header input[type="number"]:hover,
+header input[type="number"]:focus {
+	outline: none;
+}
+
 header button {
 	margin-bottom: 10px;
 }
