@@ -60,9 +60,15 @@ class App extends Component {
 		//Используем ее при рендеринге
 		getData()
 			.then( data => {
+				//проверим localStorage на наличие избранных объявлений
+				const jsonFavorites = localStorage.getItem('favorites');
+				const favorites = jsonFavorites ? 
+					JSON.parse(jsonFavorites) 
+					: [];
 				this.setState({
 					data: data,
-					renderData: data.slice(0)
+					renderData: data.slice(0),
+					favorites: favorites
 				})
 			})
 			.catch( err => {
@@ -85,7 +91,10 @@ class App extends Component {
 		}
 		this.setState({
 			favorites: favorites
-		}, () => console.log(this.state));
+		}, () => {
+			const jsonFavorites = JSON.stringify(favorites);
+			localStorage.setItem('favorites', jsonFavorites);
+		});
 	}
 	
 	//Обработчик отображения избранных обяъвленний
