@@ -89,7 +89,7 @@ body {
 
 header {
 	flex: 0 0 auto;
-	margin: 10px;
+	padding: 10px;
 	background-color: #4D4D4D;
 	background-image: linear-gradient(to right, #BFBFBF, #4D4D4D); 
 }
