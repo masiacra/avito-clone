@@ -73,18 +73,6 @@ body {
 	font-weight: bolder;
 }
 
-
-.fixed {
-	position: fixed;
-	top: 0;
-	left : 0;
-	right: 0;
-}
-
-.hidden {
-	display: none;
-}
-
 /*Стили для чердака*/
 
 header {
@@ -178,6 +166,40 @@ main {
 	flex: 0 0 auto;
 }
 
+/*Стили для BigImage*/
+
+.big_image {
+	position: fixed;
+	top: 0;
+	left : 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(26, 26,26, .4);
+}
+
+.big_image__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0
+}
+
+.big_image__closing_btn {
+	background-color: black;
+	padding: 10px;
+	border-radius: 25%;
+	font-size: 2rem;
+	color: white;
+  cursor: pointer;
+	position: absolute;
+	right: 10%;
+	top: 10%;
+}
+
+.hidden {
+	display: none;
+}
+
 
 /*Стили для подвала*/
 footer {
@@ -204,6 +226,33 @@ footer {
   .contact_card {
 	width: 45%;
   }
+  
+  /*Стили для BigImage*/
+	.big_image__image {
+		left: 5%;
+		right: 5%;
+		top: 10%;
+	}
+	
+	.big_image__closing_btn {
+		top: 10%;
+		right: 10%;
+	}
+
+
+
+.big_image__closing_btn {
+	background-color: black;
+	padding: 10px;
+	border-radius: 25%;
+	font-size: 2rem;
+	color: white;
+  cursor: pointer;
+	position: fixed;
+	right: 10%;
+	top: 10%;
+}
+  
 }
 
 

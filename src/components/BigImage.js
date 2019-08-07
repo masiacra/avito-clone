@@ -2,18 +2,21 @@ import React from "react";
 
 
 function BigImage(props) {
-	const className= props.isHidden ? 'fixed hidden' : 'fixed';
+	const className= props.isHidden ? 'big_image hidden' : 'big_image';
 	return (
 		<div className={className}>
-			<img
-				src={props.src}
-				alt={props.title}
-			/>
-			<button 
-				onClick={props.clickHandlerForClosing}
-			>
-			  Закрыть
-			</button>
+		  <div className="big_image___image">
+			  <img
+				  src={props.src}
+				  alt={props.title}
+			  />
+			  <div 
+			    className="big_image__closing_btn"
+			    onClick={props.clickHandlerForClosing}
+			  >
+			    x
+			  </div>
+			</div>
 		</div>		
 	);
 }
