@@ -29,32 +29,8 @@ class App extends Component {
 		};
 	}
 	
-	//Обработчик клика по фотографии в контактной карте
-	clickHandlerForImg = (id) => {
-		const product = this.state.data[id];
-		const {pictures, title} = product;
-		this.setState({
-			isHidden: false,
-			bigImage: pictures[0],
-			title: title
-		});
-	}
 	
-	//Обработчик клика для закрытия увеличенного фото
-	clickHandlerForClosing = () => {
-		this.setState({
-			isHidden: true
-		});
-	}
-	
-	//Обработчик изменения компонентов фильтрации
-	changeHandler = (evt) => {
-		const target = evt.target;
-		const { name, value } = target;
-		this.setState({
-			[name]: value
-		}, () => console.log(this.state));
-	}
+	//Методы жизненного цикла
 	
 	componentDidMount() {
 		//Функция получения данных сервера
@@ -100,64 +76,6 @@ class App extends Component {
 				});
 			});
 	}
-	
-	//Обработчик для компонента ContactCard.
-	//Добавляем объявление в избранное
-	clickHandlerForAddToFavorites =(id) => {
-		const favorites = this.state.favorites.slice();
-		if (!favorites.includes(id)) {
-			favorites.push(id);
-		} else {
-			const index = favorites.indexOf(id);
-			favorites.splice(index, 1);
-		}
-		this.setState({
-			favorites: favorites
-		}, () => {
-			const jsonFavorites = JSON.stringify(favorites);
-			localStorage.setItem('favorites', jsonFavorites);
-		});
-	}
-	
-	//Обработчик отображения избранных обяъвленний
-	clickHandlerForDisplay = () => {
-		this.setState( prevState => {
-			return {
-				isFavorites: !prevState.isFavorites
-			};
-		});
-	}
-	
-	//Обработчик для обработки клика по кнопке фильтрации цены
-	clickHandlerForPrices = (evt) => {
-		//Валидация цены
-		const validatePrice = price => {
-			price = Number(price);
-			if (price < 0) return 0;
-			if (price > 9999999) return 9999999;
-			return price;
-		};
-		//Тело метода
-		evt.preventDefault();
-		const target = evt.target;
-		const parent = target.parentNode;
-		const lowPrice = parent.querySelector('input[name="lowPrice"]');
-		const lowPriceValue = lowPrice.value;
-		const highPrice = parent.querySelector('input[name="highPrice"]')
-		const highPriceValue = highPrice.value;
-    
-		let validLowPrice = validatePrice(lowPriceValue);
-		const validHighPrice = validatePrice(highPriceValue);
-		if (validLowPrice > validHighPrice) {
-			validLowPrice = validHighPrice - 1;
-		}
-		this.setState({
-			lowPrice: validLowPrice, 
-			highPrice: validHighPrice
-		});
-	}
-	
-	
 	
 	render() {
 		
@@ -251,6 +169,91 @@ class App extends Component {
 		);
 	}
 	
+	//Собственные методы
+	
+	//Обработчик клика по фотографии в контактной карте
+	clickHandlerForImg = (id) => {
+		const product = this.state.data[id];
+		const {pictures, title} = product;
+		this.setState({
+			isHidden: false,
+			bigImage: pictures[0],
+			title: title
+		});
+	}
+	
+	//Обработчик клика для закрытия увеличенного фото
+	clickHandlerForClosing = () => {
+		this.setState({
+			isHidden: true
+		});
+	}
+	
+	//Обработчик изменения компонентов фильтрации
+	changeHandler = (evt) => {
+		const target = evt.target;
+		const { name, value } = target;
+		this.setState({
+			[name]: value
+		}, () => console.log(this.state));
+	}
+	
+	//Обработчик для компонента ContactCard.
+	//Добавляем объявление в избранное
+	clickHandlerForAddToFavorites =(id) => {
+		const favorites = this.state.favorites.slice();
+		if (!favorites.includes(id)) {
+			favorites.push(id);
+		} else {
+			const index = favorites.indexOf(id);
+			favorites.splice(index, 1);
+		}
+		this.setState({
+			favorites: favorites
+		}, () => {
+			const jsonFavorites = JSON.stringify(favorites);
+			localStorage.setItem('favorites', jsonFavorites);
+		});
+	}
+	
+	//Обработчик отображения избранных обяъвленний
+	clickHandlerForDisplay = () => {
+		this.setState( prevState => {
+			return {
+				isFavorites: !prevState.isFavorites
+			};
+		});
+	}
+	
+	//Обработчик для обработки клика по кнопке фильтрации цены
+	clickHandlerForPrices = (evt) => {
+		//Валидация цены
+		const validatePrice = price => {
+			price = Number(price);
+			if (price < 0) return 0;
+			if (price > 9999999) return 9999999;
+			return price;
+		};
+		//Тело метода
+		evt.preventDefault();
+		const target = evt.target;
+		const parent = target.parentNode;
+		const lowPrice = parent.querySelector('input[name="lowPrice"]');
+		const lowPriceValue = lowPrice.value;
+		const highPrice = parent.querySelector('input[name="highPrice"]')
+		const highPriceValue = highPrice.value;
+    
+		let validLowPrice = validatePrice(lowPriceValue);
+		const validHighPrice = validatePrice(highPriceValue);
+		if (validLowPrice > validHighPrice) {
+			validLowPrice = validHighPrice - 1;
+		}
+		this.setState({
+			lowPrice: validLowPrice, 
+			highPrice: validHighPrice
+		});
+	}
+		
 }
 
 
