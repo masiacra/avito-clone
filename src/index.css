@@ -171,18 +171,28 @@ main {
 .big_image {
 	position: fixed;
 	top: 0;
-	left : 0;
+	left: 0;
 	right: 0;
 	bottom: 0;
 	background-color: rgba(26, 26,26, .4);
 }
 
-.big_image__image {
+.big_image__wrapper {
 	position: absolute;
 	top: 0;
 	left: 0;
-	right: 0
+	right: 0;
 }
+
+.big_image__img {
+	position: absolute;
+	display: block;
+	top: 20px;
+	right: 5%;
+	left: 5%;
+	width: 90%;
+}
+
 
 .big_image__closing_btn {
 	background-color: black;
@@ -190,10 +200,10 @@ main {
 	border-radius: 25%;
 	font-size: 2rem;
 	color: white;
-  cursor: pointer;
+    cursor: pointer;
 	position: absolute;
 	right: 10%;
-	top: 10%;
+	top: 25px;
 }
 
 .hidden {
@@ -227,31 +237,7 @@ footer {
 	width: 45%;
   }
   
-  /*Стили для BigImage*/
-	.big_image__image {
-		left: 5%;
-		right: 5%;
-		top: 10%;
-	}
-	
-	.big_image__closing_btn {
-		top: 10%;
-		right: 10%;
-	}
-
-
-
-.big_image__closing_btn {
-	background-color: black;
-	padding: 10px;
-	border-radius: 25%;
-	font-size: 2rem;
-	color: white;
-  cursor: pointer;
-	position: fixed;
-	right: 10%;
-	top: 10%;
-}
+  
   
 }
 
@@ -293,6 +279,20 @@ footer {
 	width: 30%;
   }
   
+  /*Стили для BigImage*/
+  .big_image__img {
+	top: 30px;
+	right: 20%;
+	left: 20%;
+	width: 60%;
+  }
+
+
+  .big_image__closing_btn {
+	top: 50px;
+	right: 25%;
+  }
+  
 }
 
 @media (min-width:1000px) {
@@ -329,6 +329,20 @@ footer {
   }
   .contact_card {
 	width: 22%;
+  }
+  
+   /*Стили для BigImage*/
+  .big_image__img {
+	top: 50px;
+	right: 30%;
+	left: 30%;
+	width: 40%;
+  }
+
+
+  .big_image__closing_btn {
+	top: 80px;
+	right: 32%;
   }
   
 }
